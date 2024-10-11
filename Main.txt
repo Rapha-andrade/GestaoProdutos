@@ -1,0 +1,21 @@
+Main: 
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        Estoque estoque = new Estoque();
+
+        Produto produto1 = new ProdutoEletronico("Smartphone", 1200.00);
+        Produto produto2 = new ProdutoRoupa("Camiseta", 50.00);
+
+        estoque.adicionarProduto(produto1);
+        estoque.adicionarProduto(produto2);
+
+        System.out.println("Com desconto de 10%:");
+        estoque.exibirPrecosComDesconto(10);
+        
+        System.out.println("\nCom desconto de 60%:");
+        estoque.exibirPrecosComDesconto(60);
+    }
+}
